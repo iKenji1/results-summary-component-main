@@ -1,0 +1,290 @@
+  /* SETUP */
+
+:root {
+    --color-grey: hsl(0, 0%, 80%);
+    --gradient-background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --gradient-circle: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    --fs-1: clamp(1.125rem, 0.5983rem + 2.2472vw, 1.75rem);
+    --fs-2: clamp(3rem, 1.3146rem + 7.191vw, 5rem);
+    --fs-3: clamp(0.75rem, 0.3287rem + 1.7978vw, 1.25rem);
+}
+
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+body {
+    font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+button {
+    font-family: inherit;
+}
+p {
+    margin: 0;
+}
+
+/* CARD 1 STYLE */
+
+.title.n1 {
+    color: var(--color-grey);
+    font-size: var(--fs-1);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.circle {
+    width: fit-content;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-image: var(--gradient-circle);
+    padding: 20px clamp(2.4375rem, 1.9998rem + 1.8674vw, 2.956875rem) 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.score.n1 {
+    text-align: center;
+    margin-top: 5px;
+    font-size: var(--fs-2);
+    color: white;
+    font-weight: 800;
+}
+.circle p {
+    text-align: center;
+    margin-top: -2px;
+    font-size: var(--fs-3);
+    color: var(--color-grey);
+    margin-bottom: 10px;
+}
+
+.result {
+    color: white;
+    margin-bottom: 10px;
+    font-size: clamp(1.5rem, 0.7626rem + 3.1461vw, 2.375rem);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.card.n1 {
+    width: 100%;
+    background-image: var(--gradient-background);
+    border-radius: 0px 0px 30px 30px;
+    padding: 15px 30px 30px;
+}
+
+.paragraph {
+    color: var(--color-grey);
+    max-width: 320px;
+    font-size: clamp(0.875rem, 0.559rem + 1.3483vw, 1.25rem);
+}
+
+@media ( width >= 51rem ) {
+    .card.n1 {
+        width: fit-content;
+        background-image: var(--gradient-background);
+        border-radius: 30px;
+        padding: 40px clamp(4.375rem, 5.2022rem + -1.1029vw, 3.4375rem) 55px;
+    }
+    .title.n1 {
+        font-size: clamp(1.5rem, 0.8382rem + 0.8824vw, 2.25rem);
+        margin-bottom: 38px;
+    }
+    
+    .circle {
+        padding: clamp(1.25rem, -0.1287rem + 1.8382vw, 2.8125rem) clamp(1.875rem, 0.4963rem + 1.8382vw, 3.4375rem);
+        margin-bottom: 38px;
+    }
+    
+    .score.n1 {
+        font-size: clamp(3.4375rem, 2.0588rem + 1.8382vw, 5rem);
+    }
+    
+    .result {
+        margin-bottom: 10px;
+        font-size: clamp(1.875rem, 1.1029rem + 1.0294vw, 2.75rem);
+    }
+    
+    .paragraph {
+        max-width: clamp(11.25rem, 2.9779rem + 11.0294vw, 20.625rem);
+        font-size: clamp(0.875rem, 0.2132rem + 0.8824vw, 1.625rem);
+    }
+    
+}
+
+
+
+/* CARD 2 STYLE */
+
+.grid-card2 {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-inline: clamp(0.9375rem, -0.1685rem + 4.7191vw, 2.25rem);
+    gap: 5px;
+    align-items: center;
+}
+
+.title.n2 {
+    font-size: clamp(1.25rem, 0.5126rem + 3.1461vw, 2.125rem);
+    font-weight: 700;
+    margin-top: 15px;
+}
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 18px;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+.testName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.test-icon {
+    width: clamp(1.25rem, 0.5126rem + 3.1461vw, 2.125rem);
+    height: clamp(1.25rem, 0.5126rem + 3.1461vw, 2.125rem);
+}
+.testScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.test-name {
+    font-size: clamp(1rem, 0.5787rem + 1.7978vw, 1.5rem);
+    font-weight: 600;
+}
+.test-score {
+    font-size: clamp(1rem, 0.5787rem + 1.7978vw, 1.5rem);
+    font-weight: 600;
+}
+.test-total {
+    font-size: clamp(1rem, 0.5787rem + 1.7978vw, 1.5rem);
+    font-weight: 600;
+    color: rgb(190, 190, 190);
+}
+.button {
+    outline: transparent;
+    border: transparent;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    border-radius: 22px;
+    width: fit-content;
+    font-size: clamp(1rem, 0.7893rem + 0.8989vw, 1.25rem);
+    font-weight: 600;
+    padding: 10px 130px;
+    justify-self: center;
+}
+
+.test.reaction {
+    background-color: hsla(0, 100%, 67%, 8%);
+}
+.test.memory {
+    background-color: hsla(39, 100%, 56%, 10%);
+}
+.test.verbal {
+    background-color: hsla(166, 100%, 37%, 6%);
+}
+.test.visual {
+    background-color: hsla(234, 85%, 45%, 6%);
+}
+.test-name.reaction {
+    color: hsla(0, 100%, 67%, 100%);
+}
+.test-name.memory {
+    color: hsla(39, 100%, 56%, 100%);
+}
+.test-name.verbal {
+    color: hsla(166, 100%, 37%, 100%);
+}
+.test-name.visual {
+    color: hsla(234, 85%, 45%, 100%);
+}
+
+
+@media ( width >= 51rem ) {
+    body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        gap: 2rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        box-shadow: 0.5rem 0.5rem 2rem black;
+        border-radius: 30px;
+    }
+    .grid-card2 {
+        display: grid;
+        width: clamp(21.875rem, 15.2574rem + 8.8235vw, 29.375rem);
+        margin: 0;
+        padding: 30px;
+        background-color: white;
+        border-radius: 30px;
+        grid-template-columns: fit-content;
+        gap: 5px;
+        align-items: center;
+    }
+    .title.n2 {
+        font-size: clamp(1.5rem, 1.1691rem + 0.4412vw, 1.875rem);
+    }
+    .test {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block: 18px;
+        padding: 15px 10px;
+        border-radius: 10px;
+    }
+    .testName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .test-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .testScore {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .test-name {
+        font-size: 20px;
+    }
+    .test-score {
+        font-size: 20px;
+    }
+    .test-total {
+        font-size: 20px;
+    }
+    .button {
+        font-size: clamp(1rem, 0.7893rem + 0.8989vw, 1.25rem);
+        padding: 10px 100px;
+    }
+}
+
+.attribution { 
+    font-size: 1rem;
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
